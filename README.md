@@ -34,6 +34,7 @@ Rename `contracts/env-example` to `contracts/.env` and add your Fuji and local p
 ## Deploy the Smart Contracts
 
 ```zsh
+cd /path/to/RUN/contracts
 # deploy the NFT Collection
 npx hardhat run scripts/deployNFTCollection.js --network local
 NFT Collection deployed to: 0xB1eCe8f6b341aEB75F0f22ADe2eE85B5cEbE582E
@@ -57,7 +58,7 @@ const runTokenContractAddress = "0xBd26804139886d3A0B3378d1D7E95a8bd260619f";
 
 ## Install Live Server
 
-If you're using VSCode then install the [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) and right-click on `index.html` and select "Open with Live Server" and load `http://127.0.0.1:5500/game/` in your browser.
+If you're using VSCode then install the [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) and right-click on `game/index.html` and select "Open with Live Server" and load `http://127.0.0.1:5500/game/` in your browser.
 
 ## Credit
 
