@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" type="module"></script>
+</head>
+<body>
+  <button class="button1" onclick="claimNft()">Claim NFT</button>
+  <button class="button2" onclick="claimTokens()">Claim Tokens</button>
+  <button class="button3" onclick="connectMetamask()">Connect MetaMask</button>
+
+  <span class="nftTotalScore" data-nft-total-score>NFT Total Score: 0</span>
+  <span class="gavaxTotalScore" data-avax-total-score>gAVAX Total Score: 0</span>
+  <span class="score1" data-nft-score>NFT Score: 0</span>
+  <span class="score" data-score>gAVAX Score: 0</span>
+  <div class="game" data-game>
+    <div class="start-screen" data-start-screen>Press Any Key To Start</div>
+    <img src="imgs/ground.png" alt="" class="ground" data-ground>
+    <img src="imgs/ground.png" alt="" class="ground" data-ground>
+    <img src="imgs/playerStands.png" alt="" class="player" data-player>
+  </div>
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+  type="application/javascript"></script>
+  <script src="blockchain.js" type="application/javascript"></script>
+</body>
+</html>
