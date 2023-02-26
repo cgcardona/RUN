@@ -1,0 +1,95 @@
+{
+  "styles link": {
+		"scope": "html",
+    "prefix": "styles link",
+    "body": "<link rel='stylesheet' href='styles.css'>",
+    "description": "styles link snippet"
+  },
+  "script tag": {
+		"scope": "html",
+    "prefix": "script tag",
+    "body": "<script src='script.js' type='module'></script>",
+    "description": "script tag snippet"
+  },
+  "claim NFT button": {
+		"scope": "html",
+    "prefix": "claimNFT Button",
+    "body": "<button class='button1' onclick='claimNFT()'>Claim NFT</button>",
+    "description": "claim NFT button snippet"
+  },
+  "claim tokens button": {
+		"scope": "html",
+    "prefix": "claimTokens Button",
+    "body": "<button class='button2' onclick='claimTokens()'>Claim Tokens</button>",
+    "description": "claim tokens button snippet"
+  },
+  "connect MetaMask button": {
+		"scope": "html",
+    "prefix": "connect MetaMask Button",
+    "body": "<button class='button3' onclick='connectMetaMask()'>Connect MetaMask</button>",
+    "description": "connect MetaMask button snippet"
+  },
+  "nft total score span": {
+		"scope": "html",
+    "prefix": "nft total score span",
+    "body": "<span class='nftTotalScore' data-nft-total-score>NFT Total Score: 0</span>",
+    "description": "nft total score span snippet"
+  },
+  "run total score span": {
+		"scope": "html",
+    "prefix": "run total score span",
+    "body": "<span class='grunTotalScore' data-avax-total-score>RUN Total Score: 0</span>",
+    "description": "run total score span snippet"
+  },
+  "nft current score span": {
+		"scope": "html",
+    "prefix": "nft current score span",
+    "body": "<span class='nftCurrentScore' data-nft-score>NFT Score: 0</span>",
+    "description": "nft current score span snippet"
+  },
+  "run current score span": {
+		"scope": "html",
+    "prefix": "run current score span",
+    "body": "<span class='runCurrentScore' data-score>RUN Score: 0</span>",
+    "description": "run current score span snippet"
+  },
+  "game div": {
+		"scope": "html",
+    "prefix": "game div",
+    "body": [
+    "<div class='game' data-game>",
+    "</div>"
+    ],
+    "description": "game div snippet"
+  },
+  "start screen div": {
+		"scope": "html",
+    "prefix": "start screen div",
+    "body": "<div class='start-screen' data-start-screen>Press Any Key To Start</div>",
+    "description": "start screen div snippet"
+  },
+  "ground img": {
+		"scope": "html",
+    "prefix": "ground img",
+    "body": "<img src='imgs/ground.png' alt='the ground' class='ground' data-ground>",
+    "description": "ground img snippet"
+  },
+  "playerStands img": {
+		"scope": "html",
+    "prefix": "playerStands img",
+    "body": "<img src='imgs/playerStands.png' alt='player standing' class='player' data-player>",
+    "description": "playerStands img snippet"
+  },
+  "ethers script": {
+		"scope": "html",
+    "prefix": "ethers script",
+    "body": "<script src='https://cdn.ethers.io/lib/ethers-5.2.umd.min.js' type='application/javascript'></script>",
+    "description": "ethers script snippet"
+  },
+  "blockchain script": {
+		"scope": "html",
+    "prefix": "blockchain script",
+    "body": "<script src='blockchain.js' type='application/javascript'></script>",
+    "description": "blockchain script snippet"
+  }
+}

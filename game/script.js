@@ -12,7 +12,6 @@ const scoreElem = document.querySelector("[data-score]")
 const startScreenElem = document.querySelector("[data-start-screen]") 
 const gavaxTotalScoreElem = document.querySelector("[data-avax-total-score]")
 const nftTotalScoreElem = document.querySelector("[data-nft-total-score]")
-
 const nftScoreElem = document.querySelector("[data-nft-score]")
 
 setPixelToGameScale()
@@ -78,7 +77,6 @@ function updateSpeedScale(delta) {
 function updateScore(delta) {
   score += delta * 0.01
   scoreElem.textContent = `GAVAX score: ${Math.floor(score)}`
-
 }
 
 function handleStart() {

@@ -1,0 +1,32 @@
+{
+  "updateCustomProperty getCustomProperty function": {
+		"scope": "javascript",
+    "prefix": "updateCustomProperty getCustomProperty function",
+    "body": [
+    "export function getCustomProperty(elem, prop) {",
+    "return parseFloat(getComputedStyle(elem).getPropertyValue(prop)) || 0",
+    "}"
+    ],
+    "description": "updateCustomProperty getCustomProperty function snippet"
+  },
+  "updateCustomProperty setCustomProperty function": {
+		"scope": "javascript",
+    "prefix": "updateCustomProperty setCustomProperty function",
+    "body": [
+    "export function setCustomProperty(elem, prop, value) {",
+    "elem.style.setProperty(prop, value)",
+    "}"
+    ],
+    "description": "updateCustomProperty setCustomProperty function snippet"
+  },
+  "updateCustomProperty incrementCustomProperty function": {
+		"scope": "javascript",
+    "prefix": "updateCustomProperty incrementCustomProperty function",
+    "body": [
+    "export function incrementCustomProperty(elem, prop, inc) {",
+    "setCustomProperty(elem, prop, getCustomProperty(elem, prop) + inc)",
+    "}"
+    ],
+    "description": "updateCustomProperty incrementCustomProperty function snippet"
+  }
+}

@@ -3,3 +3,4 @@ contracts/node_modules
 contracts/cache
 contracts/package-lock.json
 contracts/.env
+demo/

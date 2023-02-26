@@ -2,6 +2,14 @@
 
 Web3 game for Web3 Game workshop at ETH Denver 2023
 
+## Technology Stack & Dependencies
+
+- HTML, CSS, and Javascript for the website
+- [Solidity](https://soliditylang.org/ for writing the smart contracts
+- [NodeJS](https://nodejs.org/en) to install Dependencies
+- [Hardhat](https://hardhat.org) Ethereum development environment
+- [Ethers.js](https://docs.ethers.io/v5) To interact with the blockchain
+
 ## Getting Started
 
 Clone the repo

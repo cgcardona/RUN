@@ -1,0 +1,107 @@
+{
+  "nft imports": {
+		"scope": "javascript",
+    "prefix": "nft imports",
+    "body": [
+    "import {",
+    "getCustomProperty,",
+    "setCustomProperty,",
+    "incrementCustomProperty",
+    "} from './updateCustomProperty.js'"
+    ],
+    "description": "nft imports snippet"
+  },
+  "nft constants": {
+		"scope": "javascript",
+    "prefix": "nft constants",
+    "body": [
+      "const SPEED = 0.05",
+      "const OBSTACLE_INTERVAL_MIN = 500",
+      "const OBSTACLE_INTERVAL_MAX = 2000"
+    ],
+    "description": "nft constants snippet"
+  },
+  "nft dom": {
+		"scope": "javascript",
+    "prefix": "nft dom",
+    "body": "const gameElem = document.querySelector('[data-game]')",
+    "description": "nft dom snippet"
+  },
+  "nft setupNFT function": {
+		"scope": "javascript",
+    "prefix": "nft setupNFT function",
+    "body": [
+    "let nextNFTTime",
+    "export function setupNFT() {",
+    "nextNFTTime = OBSTACLE_INTERVAL_MIN",
+    "",
+    "document.querySelectorAll('[data-obstacle]').forEach(obstacle => {",
+    "obstacle.remove()",
+    "})",
+    "}"
+    ],
+    "description": "nft setupNFT function snippet"
+  },
+  "nft updateNFT function": {
+		"scope": "javascript",
+    "prefix": "nft updateNFT function",
+    "body": [
+    "export function updateNFT(delta, speedScale) {",
+    "document.querySelectorAll('[data-nft]').forEach(nft => {",
+    "incrementCustomProperty(nft, '--left', delta * speedScale * SPEED * -1)",
+    "if(getCustomProperty(nft, '--left') <= -100) {",
+    "nft.remove()",
+    "}",
+    "})",
+    "",
+    "if(nextNFTTime <= 0) {",
+    "createNFT()",
+    "",
+    "nextNFTTime = randomNumberBetween(OBSTACLE_INTERVAL_MIN, OBSTACLE_INTERVAL_MAX) / speedScale",
+    "}",
+    "",
+    "nextNFTTime -= delta",
+    "}"
+    ],
+    "description": "nft updateNFT function snippet"
+  },
+  "nft getNFTRects function": {
+		"scope": "javascript",
+    "prefix": "nft getNFTRects function",
+    "body": [
+    "export function getNFTRects() {",
+    "return [...document.querySelectorAll('[data-nft]')].map(nft => {",
+    "return nft.getBoundingClientRect()",
+    "})",
+    "}"
+    ],
+    "description": "nft getNFTRects function snippet"
+  },
+  "nft createNFT function": {
+		"scope": "javascript",
+    "prefix": "nft createNFT function",
+    "body": [
+    "export function createNFT() {",
+    "const nft = document.createElement('img')",
+    "nft.dataset.nft = true",
+    "",
+    "nft.src = './imgs/nft.png'",
+    "",
+    "nft.classList.add('nft')",
+    "setCustomProperty(nft, '--left', 100)",
+    "gameElem.append(nft)",
+    "}"
+    ],
+    "description": "nft createNFT function snippet"
+  },
+  "nft randomNumberBetween function": {
+		"scope": "javascript",
+    "prefix": "nft randomNumberBetween function",
+    "body": [
+    "export function randomNumberBetween(min, max) {",
+    "return Math.floor(Math.random() * (max - min + 1) + min)",
+    "}"
+    ],
+    "description": "nft randomNumberBetween function snippet"
+  }
+}

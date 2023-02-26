@@ -20,8 +20,8 @@ async function main() {
   await runToken.deployed();
   console.log("$RUN token deployed to:", runToken.address);
 
-  await runToken.mintTokens("0xBd26804139886d3A0B3378d1D7E95a8bd260619f", 55);
-  console.log("$RUN tokens minted")
+  // await runToken.mintTokens("0xBd26804139886d3A0B3378d1D7E95a8bd260619f", 55);
+  // console.log("$RUN tokens minted")
 }
 
 // We recommend this pattern to be able to use async/await everywhere

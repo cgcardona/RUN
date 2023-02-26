@@ -4,11 +4,12 @@ import {
   incrementCustomProperty
 } from './updateCustomProperty.js'
 
-const playerElem = document.querySelector("[data-player]")
 const JUMP_SPEED = 0.45
 const GRAVITY = 0.0015
 const PLAYER_FRAME_COUNT = 2
 const FRAME_TIME = 100
+
+const playerElem = document.querySelector("[data-player]")
 
 let isJumping
 let playerFrame

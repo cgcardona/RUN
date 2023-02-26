@@ -30,6 +30,13 @@ contract RunnerCollection is ERC1155 {
 
     function mint(uint256 amount) public {
         tokenCount += 1;
+        if( tokenCount > 5) {
+          tokenCount = 1;
+        }       
         _mint(msg.sender, tokenCount, amount, "");
+    }
+
+    function retrieve() public view returns (uint256){
+        return tokenCount;
     }
 }

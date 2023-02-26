@@ -24,8 +24,8 @@ async function main() {
   await runnerCollection.deployed();
   console.log("NFT Collection deployed to:", runnerCollection.address);
 
-  await runnerCollection.mint(10);
-  console.log("10 nfts minted")
+  // await runnerCollection.mint(10);
+  // console.log("10 nfts minted")
 }
 
 // We recommend this pattern to be able to use async/await everywhere

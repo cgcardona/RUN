@@ -1,0 +1,131 @@
+{
+  "player imports": {
+		"scope": "javascript",
+    "prefix": "player imports",
+    "body": [
+    "import {",
+    "getCustomProperty,",
+    "setCustomProperty,",
+    "incrementCustomProperty",
+    "} from './updateCustomProperty.js'"
+    ],
+    "description": "player imports snippet"
+  },
+  "player constants": {
+		"scope": "javascript",
+    "prefix": "player constants",
+    "body": [
+      "const JUMP_SPEED = 0.45",
+      "const GRAVITY = 0.0015",
+      "const PLAYER_FRAME_COUNT = 2",
+      "const FRAME_TIME = 100",
+    ],
+    "description": "player constants snippet"
+  },
+  "player dom": {
+		"scope": "javascript",
+    "prefix": "player dom",
+    "body": "const playerElem = document.querySelector('[data-player]')",
+    "description": "player dom snippet"
+  },
+  "player setupPlayer function": {
+		"scope": "javascript",
+    "prefix": "player setupPlayer function",
+    "body": [
+    "let isJumping",
+    "let playerFrame",
+    "let currentTimeFrame",
+    "let yVelocity",
+    "export function setupPlayer() {",
+    "isJumping = false",
+    "playerFrame = 0",
+    "currentTimeFrame = 0",
+    "yVelocity = 0",
+    "setCustomProperty(playerElem, '--bottom', 0)",
+    "document.removeEventListener('keydown', onJump)",
+    "document.addEventListener('keydown', onJump)",
+    "}"
+    ],
+    "description": "player setupPlayer function snippet"
+  },
+  "player updatePlayer function": {
+		"scope": "javascript",
+    "prefix": "player updatePlayer function",
+    "body": [
+    "export function updatePlayer(delta, speedScale) {",
+    "handleRun(delta, speedScale)",
+    "handleJump(delta)",
+    "}"
+    ],
+    "description": "player updatePlayer function snippet"
+  },
+  "player getPlayerRect function": {
+		"scope": "javascript",
+    "prefix": "player getPlayerRect function",
+    "body": [
+    "export function getPlayerRect() {",
+    "return playerElem.getBoundingClientRect()",
+    "}"
+    ],
+    "description": "player getPlayerRect function snippet"
+  },
+  "player setPlayerLose function": {
+		"scope": "javascript",
+    "prefix": "player setPlayerLose function",
+    "body": [
+    "export function setPlayerLose() {",
+    "playerElem.src = './imgs/playerJumps.png'",
+    "}"
+    ],
+    "description": "player setPlayerLose function snippet"
+  },
+  "player handleRun function": {
+		"scope": "javascript",
+    "prefix": "player handleRun function",
+    "body": [
+    "export function handleRun(delta, speedScale) {",
+    "if(isJumping) {",
+    "playerElem.src = './imgs/playerJumps.png'",
+    "return",
+    "}",
+    "",
+    "if(currentTimeFrame >= FRAME_TIME) {",
+    "playerFrame = (playerFrame + 1) % PLAYER_FRAME_COUNT",
+    "playerElem.src = `./imgs/playerRuns${playerFrame}.png`",
+    "currentTimeFrame -= FRAME_TIME",
+    "}",
+    "currentTimeFrame += delta * speedScale",
+    "}"
+    ],
+    "description": "player handleRun function snippet"
+  },
+  "player handleJump function": {
+		"scope": "javascript",
+    "prefix": "player handleJump function",
+    "body": [
+    "export function handleJump(delta) {",
+    "if(!isJumping) return",
+    "incrementCustomProperty(playerElem, '--bottom', yVelocity * delta)",
+    "if(getCustomProperty(playerElem, '--bottom') <= 0) {",
+    "setCustomProperty(playerElem, '--bottom', 0)",
+    "isJumping = false",
+    "}",
+    "yVelocity -= GRAVITY * delta",
+    "}"
+    ],
+    "description": "player handleJump function snippet"
+  },
+  "player onJump function": {
+		"scope": "javascript",
+    "prefix": "player onJump function",
+    "body": [
+    "export function onJump(e) {",
+    "if(e.code !== 'Space' || isJumping) return",
+    "",
+    "yVelocity = JUMP_SPEED",
+    "isJumping = true",
+    "}"
+    ],
+    "description": "player onJump function snippet"
+  }
+}
