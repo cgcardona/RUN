@@ -9,6 +9,7 @@ Web3 game for Avalanche Summit II workshop
 - [NodeJS](https://nodejs.org/en) to install Dependencies
 - [Hardhat](https://hardhat.org) Web3 development environment
 - [Ethers.js](https://docs.ethers.io/v5) To interact with the blockchain
+- [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for launching `index.html`
 
 ## Getting Started
 
